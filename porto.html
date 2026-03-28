@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhammad Fata Aditya</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Blue-600
+                        secondary: '#1e40af', // Blue-800
+                        dark: '#0f172a', // Slate-900
+                        light: '#f8fafc', // Slate-50
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #2563eb;
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+            top: 6px;
+            border: 4px solid #eff6ff;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-xl font-bold text-dark tracking-tight">Fata<span class="text-primary">Aditya.</span></a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#tentang" class="text-slate-600 hover:text-primary font-medium transition-colors">Tentang</a>
+                    <a href="#pendidikan" class="text-slate-600 hover:text-primary font-medium transition-colors">Pendidikan</a>
+                    <a href="#pengalaman" class="text-slate-600 hover:text-primary font-medium transition-colors">Pengalaman</a>
+                    <a href="#keahlian" class="text-slate-600 hover:text-primary font-medium transition-colors">Keahlian</a>
+                </div>
+
+                <!-- Kontak CTA -->
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/6285157736207" target="_blank" class="bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-full font-medium transition-colors shadow-sm shadow-blue-500/30 flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute w-full">
+            <div class="px-4 pt-2 pb-4 space-y-1 shadow-lg">
+                <a href="#tentang" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Tentang</a>
+                <a href="#pendidikan" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Pendidikan</a>
+                <a href="#pengalaman" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Pengalaman</a>
+                <a href="#keahlian" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Keahlian</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto fade-in">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 text-center md:text-left">
+                <div class="inline-block px-3 py-1 mb-6 rounded-full bg-blue-100 text-primary text-sm font-semibold tracking-wide">
+                    Mahasiswa Akuntansi & Data Antusias
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight mb-6">
+                    Halo, Saya <br><span class="text-primary">Muhammad Fata Aditya</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                    Berpengalaman sebagai kepala departemen di organisasi mahasiswa dan memiliki pengalaman magang di Kantor Akuntan Publik. Memiliki minat kuat pada akuntansi dan analisis data untuk mendukung pengambilan keputusan.
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="mailto:fatasdit35@gmail.com" class="bg-primary hover:bg-secondary text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2">
+                        <i class="fas fa-envelope"></i> Email Saya
+                    </a>
+                    <a href="https://wa.me/6285157736207" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-green-500/30 flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+                    </a>
+                    <a href="https://www.linkedin.com/in/fata-aditya-a6a8a8366" target="_blank" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-3.5 rounded-full font-semibold transition-all shadow-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-linkedin text-[#0A66C2]"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center justify-center md:justify-start gap-4 text-slate-500 text-sm font-medium">
+                    <div class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-slate-400"></i> Temanggung, Jawa Tengah</div>
+                    <div class="hidden sm:block w-1 h-1 bg-slate-300 rounded-full"></div>
+                    <div class="flex items-center gap-1.5"><i class="fas fa-phone-alt text-slate-400"></i> 0851-5773-6207</div>
+                </div>
+            </div>
+            
+            <!-- Foto Profil Placeholder (Bisa diganti dengan foto asli) -->
+            <div class="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 relative flex-shrink-0">
+                <div class="absolute inset-0 bg-blue-100 rounded-full blur-2xl opacity-60"></div>
+                <div class="relative w-full h-full bg-white rounded-full p-2 shadow-xl border border-slate-100">
+                    <div class="w-full h-full rounded-full bg-slate-200 overflow-hidden flex items-center justify-center relative">
+                        <!-- Ganti src di bawah ini dengan URL foto Anda -->
+                        <i class="fas fa-user-tie text-6xl text-slate-400"></i>
+                        <img src="Muhammad Fata Aditya.jpg" alt="Muhammad Fata Aditya" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-dark mb-6">Tentang Saya</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Saya adalah seorang individu yang proaktif dalam mengikuti perkembangan teknologi dan tren industri. Memiliki kemampuan untuk memproses dan menginterpretasikan data. Selain fokus pada detail dan prosedur akuntansi yang saya asah selama magang di Kantor Akuntan Publik, saya juga memiliki kemampuan kepemimpinan dan komunikasi bahasa Inggris yang kuat untuk keperluan profesional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan Section -->
+    <section id="pendidikan" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-2 text-center">Pendidikan</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-10 max-w-4xl mx-auto transform hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark">Universitas Tidar Magelang</h3>
+                        <p class="text-primary font-medium text-lg mt-1">S1 Akuntansi</p>
+                    </div>
+                </div>
+                
+                <p class="text-slate-500 mb-6 flex items-center gap-2"><i class="fas fa-map-pin"></i> Magelang, Jawa Tengah</p>
+                
+                <div class="space-y-3 text-slate-600">
+                    <h4 class="font-semibold text-dark mb-2">Aktivitas & Pencapaian:</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Program Pengabdian Masyarakat - PMM Desa Wringinputih</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Publikasi Artikel Ilmiah</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Kompetisi Fotografi</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Section -->
+    <section id="pengalaman" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-2 text-center">Pengalaman Profesional & Organisasi</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+
+            <div class="max-w-4xl mx-auto relative border-l-2 border-slate-200 ml-3 md:mx-auto md:border-l-0">
+                <!-- Timeline Line Desktop -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 -translate-x-1/2"></div>
+
+                <!-- Item 1: Magang KAP -->
+                <div class="relative mb-12 md:flex md:justify-between md:items-center w-full group">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:text-right md:pr-10 relative">
+                        <div class="timeline-dot md:hidden"></div>
+                        <h3 class="text-xl font-bold text-dark">Kantor Akuntan Publik Purba Lauddin & Rekan</h3>
+                        <p class="text-primary font-medium mt-1">Internship (Magang)</p>
+                        <p class="text-sm text-slate-500 mt-2">Magelang, Jawa Tengah</p>
+                    </div>
+                    
+                    <div class="hidden md:block absolute left-1/2 top-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full -translate-x-1/2 -translate-y-1/2 shadow-sm group-hover:scale-125 transition-transform duration-300"></div>
+                    
+                    <div class="md:w-5/12 md:pl-10 pl-6 border-l-2 border-slate-200 md:border-l-0 relative">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm group-hover:shadow-md transition-shadow">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">2023 - 2024</span>
+                            <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
+                                <li>Membantu klasifikasi aset untuk memastikan kategorisasi yang akurat pada laporan keuangan.</li>
+                                <li>Mendukung tugas terkait perpajakan, persiapan dokumentasi, dan pemeriksaan kepatuhan.</li>
+                                <li>Mengelola korespondensi klien, mempersiapkan surat resmi.</li>
+                                <li>Mengembangkan ketelitian terhadap detail dan prosedur akuntansi di lingkungan profesional.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Koperasi Mahasiswa -->
+                <div class="relative mb-12 md:flex md:justify-between md:items-center w-full md:flex-row-reverse group">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:text-left md:pl-10 relative">
+                        <div class="timeline-dot md:hidden"></div>
+                        <h3 class="text-xl font-bold text-dark">Koperasi Mahasiswa (Kopma)</h3>
+                        <p class="text-primary font-medium mt-1">Kepala Divisi Media & Informasi</p>
+                        <p class="text-sm text-slate-500 mt-2">Magelang, Indonesia</p>
+                    </div>
+                    
+                    <div class="hidden md:block absolute left-1/2 top-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full -translate-x-1/2 -translate-y-1/2 shadow-sm group-hover:scale-125 transition-transform duration-300"></div>
+                    
+                    <div class="md:w-5/12 md:pr-10 pl-6 border-l-2 border-slate-200 md:border-l-0 relative md:text-right">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm group-hover:shadow-md transition-shadow text-left md:text-right">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Jan 2024 - Des 2024</span>
+                            <ul class="text-slate-600 text-sm space-y-2 list-none md:list-none">
+                                <li><span class="md:hidden">• </span>Memimpin 5 anggota tim, membuat rutin 7+ poster story & 3+ feed Instagram per bulan.</li>
+                                <li><span class="md:hidden">• </span>Menyediakan lebih dari 20 desain poster selama periode jabatan.</li>
+                                <li><span class="md:hidden">• </span>Mengelola komunikasi internal & eksternal, menjaga citra organisasi koperasi yang berfokus pada manajemen & kepemimpinan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Program Pengabdian -->
+                <div class="relative md:flex md:justify-between md:items-center w-full group">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:text-right md:pr-10 relative">
+                        <div class="timeline-dot md:hidden"></div>
+                        <h3 class="text-xl font-bold text-dark">Program Pengabdian BSF Wringinputih</h3>
+                        <p class="text-primary font-medium mt-1">Divisi Media</p>
+                        <p class="text-sm text-slate-500 mt-2">Borobudur, Magelang</p>
+                    </div>
+                    
+                    <div class="hidden md:block absolute left-1/2 top-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full -translate-x-1/2 -translate-y-1/2 shadow-sm group-hover:scale-125 transition-transform duration-300"></div>
+                    
+                    <div class="md:w-5/12 md:pl-10 pl-6 border-l-2 border-slate-200 md:border-l-0 relative">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm group-hover:shadow-md transition-shadow">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Jun 2024 - Des 2024</span>
+                            <p class="text-xs text-slate-500 mb-3 italic">Implementasi ekonomi sirkular melalui budidaya maggot BSF (Black Soldier Fly) yang mengubah sampah organik menjadi pakan ternak bernilai tinggi.</p>
+                            <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
+                                <li>Membangun antusiasme publik untuk berpartisipasi dalam program.</li>
+                                <li>Memastikan dokumentasi kegiatan berjalan dengan baik.</li>
+                                <li>Membuat 2 konten video edukasi/informasi setiap minggunya terkait program.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian & Sertifikasi Section -->
+    <section id="keahlian" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-2 text-center">Keahlian & Sertifikasi</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Keterampilan Inti -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-6">Keterampilan Utama</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Akuntansi Keuangan</span>
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Analisis Data</span>
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Perpajakan</span>
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Manajemen Media</span>
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Desain Grafis (Poster)</span>
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Kepemimpinan</span>
+                        <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Komunikasi Bahasa Inggris</span>
+                    </div>
+                </div>
+
+                <!-- Sertifikasi & Bahasa -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-6">Sertifikasi & Pencapaian</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 transition-colors">
+                            <i class="fas fa-file-invoice-dollar text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark">Sertifikasi Brevet A & B</h4>
+                                <p class="text-sm text-slate-500">Tahun 2024</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 transition-colors">
+                            <i class="fas fa-language text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark">TOEFL English Proficiency</h4>
+                                <p class="text-sm text-slate-500">Score: 450 (Tahun 2025)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <a href="#" class="text-2xl font-bold tracking-tight text-white">Fata<span class="text-primary">Aditya.</span></a>
+                    <p class="text-slate-400 mt-2 text-sm">Akuntansi • Analisis Data • Manajemen</p>
+                </div>
+                
+                <div class="flex space-x-5">
+                    <a href="mailto:fatasdit35@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/6285157736207" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#25D366] hover:text-white transition-colors" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/fata-aditya-a6a8a8366" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center md:flex md:justify-between items-center">
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 Muhammad Fata Aditya. All rights reserved.
+                </p>
+                <p class="text-slate-500 text-sm mt-2 md:mt-0">
+                    Lokasi: Temanggung, Jawa Tengah
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script untuk Interaktivitas Dasar -->
+    <script>
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile ketika tautan diklik
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
